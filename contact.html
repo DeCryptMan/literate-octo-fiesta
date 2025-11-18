@@ -141,56 +141,82 @@
 
           <div class="col-md-7 nf-animate" data-animate="fade-up">
             <div class="nf-glass-block nf-glass-compact">
-              <form>
-                <div class="mb-3">
-                  <label for="role" class="form-label small fw-semibold">Ձեր դերը ծրագրում</label>
-                  <select id="role" class="form-select form-select-sm">
-                    <option value="mentee">Mentee Պրոֆիլ դիմում</option>
-                    <option value="mentor">Մենթոր Պրոֆիլ դիմում</option>
-                    <option value="partner">Գործընկեր կազմակերպություն</option>
-                    <option value="other">Այլ հարց</option>
-                  </select>
+              <form id="nf-contact-form" class="nf-contact-form" data-endpoint="/backend/contact">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="role" class="form-label small fw-semibold">Ձեր դերը ծրագրում</label>
+                    <select id="role" name="role" class="form-select form-select-sm" required>
+                      <option value="mentee">Mentee Պրոֆիլ դիմում</option>
+                      <option value="mentor">Մենթոր Պրոֆիլ դիմում</option>
+                      <option value="partner">Գործընկեր կազմակերպություն</option>
+                      <option value="other">Այլ հարց</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="fullName" class="form-label small fw-semibold">Անուն, ազգանուն</label>
+                    <input
+                      type="text"
+                      id="fullName"
+                      name="fullName"
+                      class="form-control form-control-sm"
+                      placeholder="օրինակ՝ Անի Սահակյան"
+                      required
+                    >
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="email" class="form-label small fw-semibold">Էլ․ հասցե</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control form-control-sm"
+                      placeholder="name@example.com"
+                      required
+                    >
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="phone" class="form-label small fw-semibold">Հեռախոս (ըստ ցանկության)</label>
+                    <input
+                      type="text"
+                      id="phone"
+                      name="phone"
+                      class="form-control form-control-sm"
+                      placeholder="+374 ..."
+                    >
+                  </div>
+
+                  <div class="col-12">
+                    <label for="message" class="form-label small fw-semibold">
+                      Պատմեք ձեր մասին և ինչով եք հետաքրքրված
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="5"
+                      class="form-control form-control-sm"
+                      placeholder="Կարճ գրեք ձեր փորձի, հետաքրքրությունների և սպասումների մասին։"
+                      required
+                    ></textarea>
+                  </div>
                 </div>
 
-                <div class="mb-3">
-                  <label for="fullName" class="form-label small fw-semibold">Անուն, ազգանուն</label>
-                  <input type="text" id="fullName" class="form-control form-control-sm" placeholder="օրինակ՝ Անի Սահակյան">
+                <div class="d-flex flex-column flex-md-row gap-2 mt-3 align-items-md-center">
+                  <div class="d-flex gap-2">
+                    <button type="submit" class="btn nf-btn-primary nf-btn-lg" data-submit>
+                      Ուղարկել դիմումը
+                    </button>
+                    <button type="reset" class="btn nf-btn-outline nf-btn-lg" data-reset>
+                      Մաքրել
+                    </button>
+                  </div>
+                  <div class="nf-form-status" data-form-status role="status" aria-live="polite"></div>
                 </div>
 
-                <div class="mb-3">
-                  <label for="email" class="form-label small fw-semibold">Էլ․ հասցե</label>
-                  <input type="email" id="email" class="form-control form-control-sm" placeholder="name@example.com">
-                </div>
-
-                <div class="mb-3">
-                  <label for="phone" class="form-label small fw-semibold">Հեռախոս (ըստ ցանկության)</label>
-                  <input type="text" id="phone" class="form-control form-control-sm" placeholder="+374 ...">
-                </div>
-
-                <div class="mb-3">
-                  <label for="message" class="form-label small fw-semibold">
-                    Պատմեք ձեր մասին և ինչով եք հետաքրքրված
-                  </label>
-                  <textarea
-                    id="message"
-                    rows="5"
-                    class="form-control form-control-sm"
-                    placeholder="Կարճ գրեք ձեր փորձի, հետաքրքրությունների և սպասումների մասին։"
-                  ></textarea>
-                </div>
-
-                <div class="d-flex gap-2">
-                  <button type="submit" class="btn nf-btn-primary nf-btn-lg">
-                    Ուղարկել դիմումը
-                  </button>
-                  <button type="reset" class="btn nf-btn-outline nf-btn-lg">
-                    Մաքրել
-                  </button>
-                </div>
-
-                <p class="small text-muted mt-2 mb-0">
-                  * Ներկայիս տարբերակում տվյալները ուղարկվում են only front-end մակարդակում։
-                  Հետագայում կարող եք backend կողմում միացնել ձևի ենթարկում (PHP, email, CRM և այլն)։
+                <p class="small text-muted mt-3 mb-0">
+                  Ձեր ուղարկած դիմումը պահվում է backend-ում և նշվում է եզակի կոդով, որպեսզի թիմը արագ արձագանքի։
                 </p>
               </form>
             </div>

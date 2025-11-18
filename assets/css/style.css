@@ -375,6 +375,32 @@ body::-webkit-scrollbar-thumb:hover {
   background: #f9fafb;
 }
 
+/* Form status */
+.nf-contact-form {
+  position: relative;
+}
+
+.nf-form-status {
+  font-size: 0.9rem;
+  color: var(--nf-muted);
+  min-height: 1.5rem;
+}
+
+.nf-form-status[data-state='progress'] {
+  color: var(--nf-text);
+  font-weight: 600;
+}
+
+.nf-form-status[data-state='success'] {
+  color: var(--nf-accent);
+  font-weight: 700;
+}
+
+.nf-form-status[data-state='error'] {
+  color: #dc2626;
+  font-weight: 600;
+}
+
 .nf-btn-lg {
   padding: 0.7rem 1.4rem;
   font-size: 0.95rem;
