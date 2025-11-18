@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8" />
+  <title>Բիզնես և Կրթություն Ասոցիացիա — Մենթորության ծրագիր</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Բիզնես և Կրթություն Ասոցիացիայի մենթորության ծրագիր՝ ուսանողների և երիտասարդ մասնագետների համար։"
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Bootstrap 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body class="nf-body">
+
+  <!-- Background layers -->
+  <div class="nf-bg">
+    <div class="nf-bg-blobs"></div>
+    <div class="nf-bg-grid"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="nf-header shadow-sm">
+    <div class="nf-topbar">
+      <div class="container-lg d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-1">
+        <div class="nf-topbar-left small">
+          <span class="nf-topbar-label">Կոնտակտային կենտրոն</span>
+          <span class="nf-topbar-sep">•</span>
+          <span>info@be-association.am</span>
+          <span class="nf-topbar-sep">•</span>
+          <span>+374 (00) 00 00 00</span>
+        </div>
+        <div class="nf-topbar-right small d-flex align-items-center gap-3">
+          <span class="text-muted">Երևան, Հայաստան</span>
+          <span class="nf-lang-switch">
+            <button type="button" class="nf-lang-btn nf-lang-btn-active">HY</button>
+            <button type="button" class="nf-lang-btn">EN</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-md nf-navbar">
+      <div class="container-lg">
+        <a href="index.html#hero" class="navbar-brand d-flex align-items-center gap-2 nf-logo-link">
+          <div class="nf-logo-wrapper">
+            <div class="nf-logo-circle d-flex align-items-center justify-content-center">
+              <span class="nf-logo-text">BE</span>
+            </div>
+            <span class="nf-logo-glow"></span>
+          </div>
+
+          <div class="nf-logo-wrapper nf-logo-wrapper-secondary">
+            <div class="nf-logo-circle nf-logo-circle-secondary d-flex align-items-center justify-content-center">
+              <span class="nf-logo-text">ED</span>
+            </div>
+            <span class="nf-logo-glow nf-logo-glow-secondary"></span>
+          </div>
+
+          <div class="d-flex flex-column ms-1">
+            <span class="nf-logo-title">Բիզնես և Կրթություն Ասոցիացիա</span>
+            <span class="nf-logo-subtitle">Business &amp; Education Association</span>
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler nf-navbar-toggler"
+          type="button"
+          aria-label="Toggle navigation"
+          id="mobile-menu-toggle"
+        >
+          <span class="nf-burger-line"></span>
+          <span class="nf-burger-line"></span>
+          <span class="nf-burger-line"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nf-navbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0 nf-nav-list">
+            <li class="nav-item">
+              <a class="nav-link nf-nav-link nf-nav-link-main active" href="#hero">Գլխավոր</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nf-nav-link" href="#program">Ծրագրի մասին</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nf-nav-link" href="#news">Նորություններ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nf-nav-link" href="#apply">Դիմում</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nf-nav-link" href="about.html">Մեր մասին</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nf-nav-link" href="contact.html">Կապ</a>
+            </li>
+          </ul>
+
+          <div class="d-none d-md-flex align-items-center gap-2 ms-3">
+            <button class="btn nf-btn-outline nf-btn-sm">Մուտք</button>
+            <a href="#apply" class="btn nf-btn-primary nf-btn-sm">
+              Դիմել ծրագրին
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nf-mobile-cta d-md-none" id="nf-mobile-cta">
+        <button class="btn w-100 mb-2 nf-btn-outline nf-btn-sm">Մուտք</button>
+        <a href="#apply" class="btn w-100 nf-btn-primary nf-btn-sm">Դիմել ծրագրին</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="nf-section nf-hero">
+      <div class="container-lg">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="nf-badge nf-animate" data-animate="fade-up">
+              <span class="nf-badge-dot"></span>
+              <span>Կապ բիզնեսի, համալսարանների և երիտասարդների միջեւ</span>
+            </div>
+
+            <h1 class="nf-hero-title nf-animate" data-animate="fade-up">
+              Բիզնես և Կրթություն Ասոցիացիա
+              <span class="nf-gradient-text">Մենթորության ծրագիր</span>
+            </h1>
+
+            <p class="nf-hero-subtitle nf-animate" data-animate="fade-up">
+              Մենթորության այս ծրագիրը միավորում է փորձառու բիզնես մասնագետներին և
+              ուսանողներին կամ երիտասարդ մասնագետներին՝ օգնելու կարիերայի ուղղության
+              ընտրության, իրական նախագծերի փորձի և պրոֆեսիոնալ ցանցի ձևավորման մեջ։
+            </p>
+
+            <div class="nf-hero-actions nf-animate" data-animate="fade-up">
+              <a href="#apply" class="btn nf-btn-primary nf-btn-lg">
+                Դիմել որպես մասնակից
+              </a>
+              <button class="btn nf-btn-ghost nf-btn-lg">
+                Դիմել որպես մենթոր
+              </button>
+            </div>
+
+            <div class="nf-hero-meta nf-animate" data-animate="fade-up">
+              <div class="d-flex align-items-center gap-3">
+                <div class="nf-avatar-stack">
+                  <div class="nf-avatar-circle nf-avatar-1"></div>
+                  <div class="nf-avatar-circle nf-avatar-2"></div>
+                  <div class="nf-avatar-circle nf-avatar-3"></div>
+                </div>
+                <span>Ծրագիրն already գործում է բիզնեսի և կրթական տարբեր հաստատություններում</span>
+              </div>
+              <div class="d-flex align-items-center gap-1">
+                <span class="nf-star">★</span>
+                <span class="fw-semibold text-dark">4.9/5</span>
+                <span>մասնակիցների գնահատումներով</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="nf-hero-mockup-wrapper nf-animate" data-animate="fade-left">
+              <div class="nf-hero-mockup">
+                <div class="nf-window-top d-flex align-items-center justify-content-between">
+                  <div class="d-flex align-items-center gap-1">
+                    <span class="nf-dot nf-dot-red"></span>
+                    <span class="nf-dot nf-dot-yellow"></span>
+                    <span class="nf-dot nf-dot-green"></span>
+                  </div>
+                  <span class="nf-window-title">Մենթորության ծրագրի վահանակ</span>
+                  <span class="nf-window-pill">LIVE</span>
+                </div>
+
+                <div class="nf-window-body">
+                  <div class="row g-3">
+                    <div class="col-5">
+                      <div class="nf-card-soft mb-3">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                          <span class="nf-card-title">Ակտիվ զույգեր</span>
+                          <span class="nf-card-chip text-success">+18%</span>
+                        </div>
+                        <div class="nf-focus-chart">
+                          <div class="nf-focus-blob"></div>
+                          <div class="nf-focus-content">
+                            <div class="d-flex justify-content-between small">
+                              <span>Մենթոր–մենթի հանդիպումներ</span>
+                              <span>3 x / ամիս</span>
+                            </div>
+                            <div class="d-flex justify-content-between small nf-focus-meta">
+                              <span>Կարիերային խորհրդատվություն</span>
+                              <span>Պրակտիկ նախագծեր</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="nf-card-dashed">
+                        <div>
+                          <p class="nf-card-title mb-1">Օնլայն և օֆլայն ձևաչափ</p>
+                          <p class="nf-card-text">Հանդիպումներ, վորքշոփներ, վեբինարներ բիզնես առաջնորդների հետ։</p>
+                        </div>
+                        <button class="btn btn-sm nf-btn-pill">
+                          Ծրագրի օրացույց
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="col-7 d-flex flex-column gap-3">
+                      <div class="nf-card-soft">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                          <span class="nf-card-title">Մասնակիցների առաջընթաց</span>
+                          <span class="nf-card-text">Վերջին 6 ամիս</span>
+                        </div>
+                        <div class="nf-bar-chart">
+                          <div class="nf-bar nf-bar-1 nf-float"></div>
+                          <div class="nf-bar nf-bar-2 nf-float" style="animation-delay:.2s"></div>
+                          <div class="nf-bar nf-bar-3 nf-float" style="animation-delay:.4s"></div>
+                          <div class="nf-bar nf-bar-4 nf-float" style="animation-delay:.6s"></div>
+                          <div class="nf-bar nf-bar-5 nf-float" style="animation-delay:.8s"></div>
+                        </div>
+                      </div>
+
+                      <div class="d-flex gap-3">
+                        <div class="nf-stat-card flex-fill">
+                          <p class="nf-card-title mb-1">Աշխատանք գտած մենթի</p>
+                          <p class="nf-stat-value">62%</p>
+                          <p class="nf-stat-meta text-success">6 ամսվա ընթացքում</p>
+                        </div>
+                        <div class="nf-stat-card nf-stat-card-alt flex-fill">
+                          <p class="nf-card-title mb-1">Ստաժավորում և պրակտիկա</p>
+                          <p class="nf-stat-value">80+</p>
+                          <p class="nf-stat-meta">գործընկեր կազմակերպություններում</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="nf-floating-badge nf-animate" data-animate="fade-up">
+                <div class="nf-floating-icon">⏱</div>
+                <span><strong>12 ամիս</strong> ուղեկցող մենթորություն յուրաքանչյուր մասնակցի համար։</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section class="nf-section nf-partners">
+      <div class="container-lg">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 nf-animate" data-animate="fade-up">
+          <div class="nf-partners-label">
+            Համագործակցող բուհեր և ընկերություններ
+          </div>
+          <div class="nf-partners-logos">
+            <div class="nf-partner-logo">Համալսարան A</div>
+            <div class="nf-partner-logo">Համալսարան B</div>
+            <div class="nf-partner-logo">Company X</div>
+            <div class="nf-partner-logo">Company Y</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAM -->
+    <section id="program" class="nf-section">
+      <div class="container-lg">
+        <div class="row align-items-end mb-4 mb-md-5 g-3">
+          <div class="col-md-8 nf-animate" data-animate="fade-up">
+            <h2 class="nf-section-title">
+              Ինչ եք ստանում մենթորության ծրագրից
+            </h2>
+            <p class="nf-section-subtitle">
+              Կապ ակադեմիական կրթության և իրական բիզնեսի միջեւ․ գիտելիք, փորձ և ցանց՝ կառուցված միասին փորձառու մասնագետների հետ։
+            </p>
+          </div>
+          <div class="col-md-4 d-flex justify-content-md-end gap-3 small nf-animate" data-animate="fade-left">
+            <div class="d-flex align-items-center gap-2 text-muted">
+              <span class="nf-dot-pill nf-dot-accent"></span>
+              <span>Ինդիվիդուալ աջակցություն</span>
+            </div>
+            <div class="d-flex align-items-center gap-2 text-muted">
+              <span class="nf-dot-pill nf-dot-primary"></span>
+              <span>Գործնական փորձ</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4 nf-animate" data-animate="fade-up">
+            <article class="nf-feature-card">
+              <div class="nf-feature-icon">
+                🎯
+              </div>
+              <h3 class="nf-feature-title">Կարիերային ուղղություն</h3>
+              <p class="nf-feature-text">
+                Միասին մենթորի հետ ձևակերպում եք նպատակները, ընտրում ոլորտը և կառուցում անհատական զարգացման պլան։
+              </p>
+              <ul class="nf-feature-list">
+                <li>Մասնագիտական ուղղության հստակեցում</li>
+                <li>CV և LinkedIn խորհրդատվություն</li>
+                <li>Ինտերվյուի նախապատրաստում</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="col-md-4 nf-animate" data-animate="fade-up">
+            <article class="nf-feature-card">
+              <div class="nf-feature-icon nf-feature-icon-green">
+                📚
+              </div>
+              <h3 class="nf-feature-title">Գործնական նախագծեր</h3>
+              <p class="nf-feature-text">
+                Իրական բիզնես խնդիրներ, թիմային աշխատանք, պրեզենտացիաներ և ֆիդբեք բիզնեսի ներկայացուցիչներից։
+              </p>
+              <ul class="nf-feature-list">
+                <li>Թեմատիկ վորքշոփներ</li>
+                <li>Case study–ներ ընկերություններից</li>
+                <li>Համատեղ նախագծեր մենթորների հետ</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="col-md-4 nf-animate" data-animate="fade-up">
+            <article class="nf-feature-card">
+              <div class="nf-feature-icon nf-feature-icon-blue">
+                🤝
+              </div>
+              <h3 class="nf-feature-title">Մասնագիտական ցանց</h3>
+              <p class="nf-feature-text">
+                Հանդիպումներ գործատուների, HR մասնագետների և ոլորտային առաջնորդների հետ։
+              </p>
+              <ul class="nf-feature-list">
+                <li>Networking event-ներ</li>
+                <li>Գործընկեր ընկերությունների ներկայացումներ</li>
+                <li>Հնարավորություն ստաժավորման և աշխատանքի</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="nf-section">
+      <div class="container-lg">
+        <div class="nf-glass-block nf-animate" data-animate="fade-up">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <h2 class="nf-section-title mb-2">Ինչպես է աշխատում ծրագիրը</h2>
+              <p class="nf-section-subtitle">
+                Հստակ կառուցվածք՝ չափելի արդյունքներով․ դիմում, զույգավորում, հանդիպումներ, նախագծեր և արդյունքների գնահատում։
+              </p>
+            </div>
+            <div class="col-md-8">
+              <div class="row g-4 small">
+                <div class="col-md-4 nf-animate" data-animate="fade-up">
+                  <div class="nf-step-badge">1</div>
+                  <h3 class="nf-step-title">Դիմում և ընտրություն</h3>
+                  <p class="nf-step-text">
+                    Լրացնում եք դիմումը, պատմում հետաքրքրությունների ու նպատակների մասին․ ընտրության հանձնաժողովը հաստատում է մասնակցությունը։
+                  </p>
+                </div>
+                <div class="col-md-4 nf-animate" data-animate="fade-up">
+                  <div class="nf-step-badge">2</div>
+                  <h3 class="nf-step-title">Մենթորի հետ զույգավորում</h3>
+                  <p class="nf-step-text">
+                    Ասոցիացիան ընտրում է համապատասխան մենթոր՝ ոլորտի, փորձի և ձեր նպատակների հիման վրա։
+                  </p>
+                </div>
+                <div class="col-md-4 nf-animate" data-animate="fade-up">
+                  <div class="nf-step-badge">3</div>
+                  <h3 class="nf-step-title">Հանդիպումներ և նախագծեր</h3>
+                  <p class="nf-step-text">
+                    Պարբերական հանդիպումներ, ամփոփիչ նախագիծ և արդյունքների ներկայացում բիզնեսի ու կրթական գործընկերների մասնակցությամբ։
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLY (Mentor / Mentee) -->
+    <section id="apply" class="nf-section nf-apply-section">
+      <div class="container-lg">
+        <div class="text-center mb-4 nf-animate" data-animate="fade-up">
+          <h2 class="nf-section-title">Դիմումների պրոֆիլներ</h2>
+          <p class="nf-section-subtitle mx-auto" style="max-width: 520px;">
+            Ընտրեք ձեր դերը ծրագրում․ միացեք որպես փորձառու մենթոր կամ որպես մենթի՝ նոր քայլի համար ձեր կարիերայում։
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 nf-animate" data-animate="fade-up">
+            <article class="nf-apply-card nf-apply-card-mentor">
+              <div class="nf-apply-icon">👨‍🏫</div>
+              <h3 class="nf-apply-title">Մենթոր Պրոֆիլ դիմում</h3>
+              <p class="nf-apply-text">
+                Եթե բիզնեսում կամ կրթական ոլորտում ունեք փորձ և ցանկանում եք աջակցել նոր սերնդին՝ դիմեք որպես մենթոր։
+              </p>
+              <a href="contact.html" class="btn nf-btn-primary w-100">
+                Բացել Մենթոր Պրոֆիլ դիմում
+              </a>
+            </article>
+          </div>
+
+          <div class="col-md-6 nf-animate" data-animate="fade-up">
+            <article class="nf-apply-card nf-apply-card-mentee">
+              <div class="nf-apply-icon">🧑‍🎓</div>
+              <h3 class="nf-apply-title">Mentee Պրոֆիլ դիմում</h3>
+              <p class="nf-apply-text">
+                Եթե ուսանող կամ երիտասարդ մասնագետ եք և ցանկանում եք մենթոր ունենալ ձեր ոլորտում՝ լրացրեք mentee-ի դիմումը։
+              </p>
+              <a href="contact.html" class="btn nf-btn-outline w-100">
+                Բացել Mentee Պրոֆիլ դիմում
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news" class="nf-section nf-news-section">
+      <div class="container-lg">
+        <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between gap-3 mb-4 nf-animate" data-animate="fade-up">
+          <div>
+            <h2 class="nf-section-title">Նորություններ և ազդագրեր</h2>
+            <p class="nf-section-subtitle">
+              Վերջին նորությունները մենթորության ծրագրից, գործընկեր կազմակերպություններից և հաջողության պատմություններից։
+            </p>
+          </div>
+          <a href="#news" class="nf-news-all-link small">
+            Դիտել բոլոր նորությունները
+          </a>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4 nf-animate" data-animate="fade-up">
+            <article class="nf-news-card">
+              <div class="nf-news-tag">Հաղորդագրություն</div>
+              <h3 class="nf-news-title">Սկսվեց մենթորության նոր հոսքը 2025–ի գարնանը</h3>
+              <p class="nf-news-meta">Մարտ 10, 2025 • Երևան</p>
+              <p class="nf-news-text">
+                Այս հոսքում կմասնակցեն 12 բուհերից ուսանողներ և 25+ մենթորներ՝ տարբեր ոլորտներից․ ֆինանսներ, IT, մարքեթինգ և այլ։
+              </p>
+              <button class="nf-news-link">
+                Կարդալ ավելին
+              </button>
+            </article>
+          </div>
+
+          <div class="col-md-4 nf-animate" data-animate="fade-up">
+            <article class="nf-news-card">
+              <div class="nf-news-tag nf-news-tag-green">Գործընկերություն</div>
+              <h3 class="nf-news-title">Նոր համագործակցություն Ասոցիացիայի և Company X-ի միջև</h3>
+              <p class="nf-news-meta">Փետրվար 22, 2025 • Գործընկերություն</p>
+              <p class="nf-news-text">
+                Company X–ը կմասնակցի որպես գործընկեր կազմակերպություն՝ առաջարկելով ստաժավորման և նախագծերի իրականացման հնարավորություններ։
+              </p>
+              <button class="nf-news-link">
+                Կարդալ ավելին
+              </button>
+            </article>
+          </div>
+
+          <div class="col-md-4 nf-animate" data-animate="fade-up">
+            <article class="nf-news-card">
+              <div class="nf-news-tag nf-news-tag-blue">Հաջողության պատմություն</div>
+              <h3 class="nf-news-title">Մենթիից մինչև թիմի ղեկավար՝ մեկ ծրագրի ընթացքում</h3>
+              <p class="nf-news-meta">Հունվար 30, 2025 • Պատմություն</p>
+              <p class="nf-news-text">
+                Ծրագրի նախկին մասնակիցը՝ Նվերը, ներկայում ղեկավարում է թիմ Company Y–ում․ նրա ճանապարհը սկսվել է հենց այս մենթորության ծրագրից։
+              </p>
+              <button class="nf-news-link">
+                Կարդալ ավելին
+              </button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="nf-section">
+      <div class="container-lg">
+        <div class="text-center mb-4 mb-md-5 nf-animate" data-animate="fade-up">
+          <h2 class="nf-section-title">Մասնակցության ձևաչափեր</h2>
+          <p class="nf-section-subtitle mx-auto" style="max-width: 520px;">
+            Ծրագիրը կարող են օգտվել ուսանողները, երիտասարդ մասնագետները և բիզնես գործիքը՝
+            որպես գործընկեր կամ մենթորական ընկերություն։
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4 nf-animate" data-animate="fade-up">
+            <article class="nf-pricing-card">
+              <div>
+                <h3 class="nf-pricing-name">Մասնակից (ուսանող/երիտասարդ)</h3>
+                <p class="nf-pricing-desc">Ինդիվիդուալ մենթորություն և խմբային սեսիաներ։</p>
+                <div class="d-flex align-items-baseline gap-1 mb-3">
+                  <span class="nf-price-main">Անվճար*</span>
+                </div>
+                <ul class="nf-pricing-list">
+                  <li>12 ամսվա մենթորություն</li>
+                  <li>Մասնակցություն վորքշոփների և event-ների</li>
+                  <li>Հնարավորություն ստաժավորման</li>
+                </ul>
+              </div>
+              <button class="btn nf-btn-outline w-100 mt-3">
+                Դիմել որպես մասնակից
+              </button>
+            </article>
+          </div>
+
+          <div class="col-md-4 nf-animate" data-animate="fade-up">
+            <article class="nf-pricing-card nf-pricing-featured">
+              <div class="nf-pricing-tag">Հիմնական հոսք</div>
+              <div>
+                <h3 class="nf-pricing-name">Մենթոր (բիզնես մասնագետ)</h3>
+                <p class="nf-pricing-desc">Կիսվեք ձեր փորձով և կառուցեք նոր தலைமுறை մասնագետներ։</p>
+                <div class="d-flex align-items-baseline gap-1 mb-3">
+                  <span class="nf-price-main">Կամավորական</span>
+                </div>
+                <ul class="nf-pricing-list">
+                  <li>Մենթորական ուսուցում և մեթոդաբանություն</li>
+                  <li>Մասնակցություն մասնագիտական փակ հանդիպումների</li>
+                  <li>Հանրային ճանաչում և շնորհակալագրեր</li>
+                </ul>
+              </div>
+              <button class="btn nf-btn-primary w-100 mt-3">
+                Դիմել որպես մենթոր
+              </button>
+            </article>
+          </div>
+
+          <div class="col-md-4 nf-animate" data-animate="fade-up">
+            <article class="nf-pricing-card">
+              <div>
+                <h3 class="nf-pricing-name">Գործընկեր կազմակերպություն</h3>
+                <p class="nf-pricing-desc">Միացեք ծրագրին որպես ընկերություն կամ դասախոսական կենտրոն։</p>
+                <div class="d-flex align-items-baseline gap-1 mb-3">
+                  <span class="nf-price-main">Հատուկ պայմաններ</span>
+                </div>
+                <ul class="nf-pricing-list">
+                  <li>Համատեղ ծրագրերի ձևավորում</li>
+                  <li>Տաղանդների pipeline ձեր ընկերության համար</li>
+                  <li>Բրենդինգ և համայնքային ներկայություն</li>
+                </ul>
+              </div>
+              <button class="btn nf-btn-outline w-100 mt-3">
+                Կապ բանակցելու համար
+              </button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="nf-section">
+      <div class="container-lg">
+        <div class="nf-glass-block nf-animate" data-animate="fade-up">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <h2 class="nf-section-title mb-2">Ինչ են ասում մենթորներն ու մասնակիցները</h2>
+              <p class="nf-section-subtitle">
+                Կարծիքներ այն մասին, թե ինչպես է մենթորության ծրագիրը փոխում մասնակիցների մտածողությունն ու կարիերայի ուղղությունը։
+              </p>
+            </div>
+            <div class="col-md-8">
+              <div class="row g-4">
+                <div class="col-md-6 nf-animate" data-animate="fade-up">
+                  <article class="nf-testimonial-card nf-testimonial-blue">
+                    <p class="nf-testimonial-text">
+                      «Մենթորության ընթացքում հասկացա, թե կոնկրետ ինչ ուղղությամբ եմ ուզում զարգանալ, և արդեն ունեմ առաջարկ ստաժավորման»։
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <p class="nf-testimonial-name">Նարինե Ա.</p>
+                        <p class="nf-testimonial-role">Մասնակից, բիզնես կառավարման ուսանող</p>
+                      </div>
+                      <div class="nf-testimonial-metric">
+                        <span class="fw-semibold text-dark">+1</span> աշխատանքի առաջարկ
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6 nf-animate" data-animate="fade-up">
+                  <article class="nf-testimonial-card nf-testimonial-green">
+                    <p class="nf-testimonial-text">
+                      «Որպես մենթոր, տեսնում եմ, թե ինչպես է երիտասարդի մեջ ձևավորվում վստահություն և պատասխանատվություն իրական նախագծերի միջոցով»։
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <p class="nf-testimonial-name">Արմեն Կ.</p>
+                        <p class="nf-testimonial-role">Մենթոր, բիզնես խորհրդատու</p>
+                      </div>
+                      <div class="nf-testimonial-metric">
+                        <span class="fw-semibold text-dark">15+</span> մենթի մեկ հոսքում
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="nf-section pb-5">
+      <div class="container-lg">
+        <div class="nf-cta nf-animate" data-animate="fade-up">
+          <div class="nf-cta-overlay"></div>
+          <div class="row align-items-center g-4">
+            <div class="col-md-7">
+              <h2 class="nf-cta-title">Պատրա՞ստ ես հաջորդ քայլին քո կարիերայում։</h2>
+              <p class="nf-cta-text">
+                Դիմիր մենթորության ծրագրին և աշխատիր ուսման ընթացքում իրական բիզնեսի հետ․
+                կառուցիր փորձ, ոչ միայն գրքեր։
+              </p>
+            </div>
+            <div class="col-md-5 d-flex flex-column flex-sm-row gap-2 justify-content-md-end">
+              <button class="btn nf-btn-light nf-btn-lg flex-fill">
+                Դիմել որպես մասնակից
+              </button>
+              <button class="btn nf-btn-outline-light nf-btn-lg flex-fill">
+                Դառնալ մենթոր
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="nf-footer">
+    <div class="container-lg d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-2">
+      <div class="small text-muted">
+        <span class="fw-semibold text-dark">Բիզնես և Կրթություն Ասոցիացիա</span>
+        <span class="mx-1">•</span>
+        <span>© <span id="year"></span> Բոլոր իրավունքները պաշտպանված են։</span>
+      </div>
+      <div class="small d-flex flex-wrap gap-3">
+        <a href="about.html" class="nf-footer-link">Մեր մասին</a>
+        <a href="contact.html" class="nf-footer-link">Կապ</a>
+        <a href="#" class="nf-footer-link">Գաղտնիության քաղաքականություն</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="./assets/js/app.js"></script>
+</body>
+</html>
